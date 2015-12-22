@@ -1,0 +1,90 @@
+// ----------------------------------------------
+// Mixins
+@import "mixins";
+
+.tabs {
+	min-height: 212px;
+	position: relative;
+	width: 100%;
+	&:after,
+	&:before {
+		@include clearfix;
+	}
+
+	div:first-of-type {
+		label {
+			margin-left: 25px;
+		}
+	}
+
+	input[type="radio"] {
+		display: none;
+	}
+
+	label {
+		background: #F0F0F0;
+		border: solid #dedede;
+		border-width: 1px 0 1px 1px;
+		cursor: pointer;
+		float: left;
+		height: 30px;
+		line-height: 30px;
+		margin-right: 10px;
+		padding: 0px 0px 0px 5px;
+		position: relative;
+		z-index: 5;
+
+		&:before {
+			content: " ";
+			float: right;
+			background: #F0F0F0;
+			height: 30px;
+			position: absolute;
+			transform: skew(25deg);
+			border-style: solid;
+			border-color: #DEDEDE;
+			border-image: none;
+			border-radius: 0px 5px 0px 0px;
+			right: -10px;
+			width: 50px;
+			top: -1px;
+			border-width: 1px 1px 1px 0px;
+			z-index: -1;
+		}
+	}
+
+	[id^=tab]:checked + label {
+		background: #fff;
+		border-bottom-color: #fff;
+		color: #000;
+		position: relative;
+		top: 0;
+		z-index: 10;
+
+		&:before {
+			background: #fff;
+			border-bottom-color: #fff;
+		}
+	}
+
+	.tab-content {
+		box-sizing: border-box;
+		display: none;
+		position: absolute;
+		top: 31px;
+		width: 100%;
+		z-index: 0;
+
+		dt {
+			&.ch-box-info,
+			&.ch-box-ok {
+				background: none;
+				padding: 0px;
+			}
+		}
+	}
+
+	[id^=tab]:checked ~ [id^=tab-content] {
+		display: block;
+	}
+}

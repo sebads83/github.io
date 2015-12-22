@@ -1,0 +1,19 @@
+// ----------------------------------------------
+// Mixins
+@import "mixins";
+
+.slider {
+	h3 {
+		letter-spacing: 1px;
+	}
+
+	.ch-carousel-item {
+		margin: 0 !important;
+		width: 130px !important;
+	}
+
+	.ch-carousel-disabled {
+		display: block;
+		opacity: 0.5;
+	}
+}

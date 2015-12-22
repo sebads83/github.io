@@ -1,0 +1,89 @@
+// ----------------------------------------------
+// Mixins
+@import "mixins";
+
+h1 {
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 40px;
+	padding-top: 5px;
+}
+
+.img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.col-2 {
+	float: left;
+	width: calc(100% / 2);
+}
+
+.col-12 {
+	display: inline-block;
+	width: 100%;
+}
+
+.ch-box-lite[role="main"] {
+	margin: 25px auto;
+	max-width: 1024px;
+	padding: 10px 20px;
+}
+
+section {
+	&.data {
+		dl {
+			dt {
+				display: none;
+			}
+
+			dd {
+				.ch-price {
+					font-size: 30px;
+
+					sup {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+
+		.ch-form-row label {
+			width: auto;
+		}
+
+		.ch-form-actions {
+			margin: 10px 0;
+		}
+
+		.ch-btn,
+		.ch-btn:focus {
+			box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.5);
+			margin-bottom: 5px;
+			line-height: 35px;
+			padding: 0px 25px;
+		}
+	}
+
+	&.bottom {
+		border-top: 1px solid #DEDEDE;
+		margin-top: 20px;
+		padding-top: 20px;
+		&:after,
+		&:before {
+			@include clearfix;
+		}
+	}
+}
+
+@media screen and (max-width: 840px) {
+	.col-2 {
+		width: 100%;
+	}
+
+	#myZoom {
+		display: block;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "name": "MLTest",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-util": "*",
+    "gulp-concat": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-watch": "*",
+    "gulp-postcss": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp-rename": "*",
+    "gulp-wait": "*",
+    "gulp-minify-html": "*",
+    "gulp-minify-css": "*",
+    "gulp-autoprefixer": "*"
+  }
+}

@@ -1,0 +1,24 @@
+// ----------------------------------------------
+// Mixins
+@import "mixins";
+
+figure {
+	#myZoom {
+		cursor: pointer;
+		max-width: 425px;
+		width: 100% !important;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	#myZoom {
+		.ch-zoom-seeker,
+		.ch-zoom-loading {
+			display: none !important;
+		}
+	}
+
+	#ch-zoom-1 {
+		display: none !important;
+	}
+}
